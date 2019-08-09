@@ -13,6 +13,8 @@
 		09095D3E22FE14520054D282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09095D3D22FE14520054D282 /* Assets.xcassets */; };
 		09095D4122FE14520054D282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09095D3F22FE14520054D282 /* LaunchScreen.storyboard */; };
 		09095D4C22FE14530054D282 /* HealthFirstChallengeAssesmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D4B22FE14530054D282 /* HealthFirstChallengeAssesmentTests.swift */; };
+		09095D5C22FE19860054D282 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D5B22FE19860054D282 /* APIClient.swift */; };
+		09095D5E22FE21320054D282 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D5D22FE21320054D282 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		09095D4722FE14530054D282 /* HealthFirstChallengeAssesmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthFirstChallengeAssesmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09095D4B22FE14530054D282 /* HealthFirstChallengeAssesmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFirstChallengeAssesmentTests.swift; sourceTree = "<group>"; };
 		09095D4D22FE14530054D282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09095D5B22FE19860054D282 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		09095D5D22FE21320054D282 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		09095D5922FE14F60054D282 /* API Client */ = {
 			isa = PBXGroup;
 			children = (
+				09095D5B22FE19860054D282 /* APIClient.swift */,
 			);
 			path = "API Client";
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 		09095D5A22FE15060054D282 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				09095D5D22FE21320054D282 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,8 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09095D5E22FE21320054D282 /* Models.swift in Sources */,
 				09095D3922FE144F0054D282 /* ViewController.swift in Sources */,
 				09095D3722FE144F0054D282 /* AppDelegate.swift in Sources */,
+				09095D5C22FE19860054D282 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
