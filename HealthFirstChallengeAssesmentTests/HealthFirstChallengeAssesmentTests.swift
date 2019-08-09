@@ -21,12 +21,22 @@ class HealthFirstChallengeAssesmentTests: XCTestCase {
 
     //testing the  STAR WARS APIs
     func testGETpeopleAPI() {
-    let exp = expectation(description: "received data")
-    let peopleUrl = "https://swapi.co/api/people/"
-    
-        
-    
-    wait(for: [exp], timeout: 3)
+    let exp = expectation(description: "received data for people")
+    guard let peopleUrl = URL(string: "https://swapi.co/api/people/") else { return }
+        URLSession.shared.dataTask(with: peopleUrl) { (data, response, error) in
+            if let error = error {
+                XCTFail("\(error)")
+            } else if let data = data {
+                do {
+                    if let _ = try? JSONDecoder().decode(People.self, from: data) {
+                        exp.fulfill()
+                    }
+                }
+            }
+           
+        }.resume()
+         wait(for: [exp], timeout: 5.0)
     }
-
+    
+    
 }
