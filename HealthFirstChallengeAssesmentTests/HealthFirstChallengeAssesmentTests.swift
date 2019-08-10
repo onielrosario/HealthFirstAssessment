@@ -37,4 +37,22 @@ class HealthFirstChallengeAssesmentTests: XCTestCase {
         }.resume()
          wait(for: [exp], timeout: 5.0)
     }
+    
+    func testGETplanetsAPI() {
+        let exp = expectation(description: "received data for planets")
+        guard let peopleUrl = URL(string: "https://swapi.co/api/planets/") else { return }
+        URLSession.shared.dataTask(with: peopleUrl) { (data, response, error) in
+            if let error = error {
+                XCTFail("\(error)")
+            } else if let data = data {
+                do {
+                    if let _ = try? JSONDecoder().decode(Planets.self, from: data) {
+                        exp.fulfill()
+                    }
+                }
+            }
+            
+            }.resume()
+        wait(for: [exp], timeout: 5.0)
+    }
 }
