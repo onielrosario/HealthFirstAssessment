@@ -37,6 +37,4 @@ class HealthFirstChallengeAssesmentTests: XCTestCase {
         }.resume()
          wait(for: [exp], timeout: 5.0)
     }
-    
-    
 }
