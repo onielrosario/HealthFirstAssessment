@@ -12,8 +12,6 @@ import Foundation
 
 
 final class APIClient {
-    //this url retrieve data for STAR WARS PLANETS
-    let planetsAPIUrl = "https://swapi.co/api/planets/"
     static func getPeople(completionHandler: @escaping([People.PeopleResult]?, Error?) -> Void) {
         //this url retrieve data for STAR WARS Characters
         guard let url = URL(string: "https://swapi.co/api/people/") else { return }
@@ -29,13 +27,29 @@ final class APIClient {
                     completionHandler(nil, error)
                 }
             }
-        }.resume()
+            }.resume()
     }
     
-    
+    static func getPlanets(completionHandler: @escaping([Planets.PlanetsResult]?, Error?) -> Void) {
+        //this url retrieve data for STAR WARS PLANETS
+        guard let url = URL(string: "https://swapi.co/api/planets/") else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                completionHandler(nil, error)
+            } else if let data = data {
+                do {
+                    let planets = try JSONDecoder().decode([Planets.PlanetsResult].self, from: data)
+                    //got data
+                    completionHandler(planets,nil)
+                } catch {
+                    completionHandler(nil, error)
+                }
+            }
+            }.resume()
+    }
     
 }
 
 
- 
- 
+
+
