@@ -9,44 +9,41 @@
 import Foundation
 
 
+enum DataCategory: String {
+    case people = "people"
+    case planets = "planets"
+}
+
+
 
 
 final class APIClient {
-    static func getPeople(completionHandler: @escaping([People.PeopleResult]?, Error?) -> Void) {
-        //this url retrieve data for STAR WARS Characters
-        guard let url = URL(string: "https://swapi.co/api/people/") else { return }
+    static func getData(from name: DataCategory, completionHandler: @escaping([People.PeopleResult]?,[Planets.PlanetsResult]?, Error?) -> Void) {
+        //this url retrieve data for STAR WARS Characters or Planets depending on the name description
+        guard let url = URL(string: "https://swapi.co/api/\(name)/") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                completionHandler(nil, error)
+                completionHandler(nil,nil, error)
             } else if let data = data {
                 do {
-                    let people = try JSONDecoder().decode([People.PeopleResult].self, from: data)
+                    switch name {
+                    case .people:
+                         let people = try JSONDecoder().decode(People.self, from: data)
+                         completionHandler(people.results,nil,nil)
+                    case .planets:
+                        let planets = try JSONDecoder().decode(Planets.self, from: data)
+                        completionHandler(nil,planets.results,nil)
+                    }
                     //got data
-                    completionHandler(people,nil)
                 } catch {
-                    completionHandler(nil, error)
+                    completionHandler(nil,nil, error)
                 }
             }
             }.resume()
     }
     
-    static func getPlanets(completionHandler: @escaping([Planets.PlanetsResult]?, Error?) -> Void) {
-        //this url retrieve data for STAR WARS PLANETS
-        guard let url = URL(string: "https://swapi.co/api/planets/") else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                completionHandler(nil, error)
-            } else if let data = data {
-                do {
-                    let planets = try JSONDecoder().decode([Planets.PlanetsResult].self, from: data)
-                    //got data
-                    completionHandler(planets,nil)
-                } catch {
-                    completionHandler(nil, error)
-                }
-            }
-            }.resume()
-    }
+    //http://intergalacticdb.me/api/characters/name
+    
     
 }
 
