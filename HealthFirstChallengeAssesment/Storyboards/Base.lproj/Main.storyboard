@@ -126,6 +126,9 @@
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.95721405739999998" green="0.76110786200000002" blue="0.26649296280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backButton:" destination="RMA-a7-vUX" eventType="touchUpInside" id="dIf-34-GCz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
