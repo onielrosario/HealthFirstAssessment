@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vzd-ND-bom">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,111 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--People View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HealthFirstChallengeAssesment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeopleVC" id="BYZ-38-t0r" customClass="PeopleViewController" customModule="HealthFirstChallengeAssesment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IL-if-iuv">
+                                <rect key="frame" x="0.0" y="144" width="414" height="44.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="44"/>
+                                <color key="textColor" red="0.96111959218978882" green="0.76505500078201294" blue="0.26649081707000732" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-star-wars-48" translatesAutoresizingMaskIntoConstraints="NO" id="R6g-6L-CuW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="CqD-Dm-lFk"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Mw-YG-213">
+                                <rect key="frame" x="0.0" y="188.5" width="414" height="624.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="7Mw-YG-213" firstAttribute="top" secondItem="4IL-if-iuv" secondAttribute="bottom" id="0Am-tI-R3C"/>
+                            <constraint firstItem="7Mw-YG-213" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="539-85-L44"/>
+                            <constraint firstItem="R6g-6L-CuW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OEO-iP-vgk"/>
+                            <constraint firstItem="7Mw-YG-213" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uq4-XJ-uZ0"/>
+                            <constraint firstItem="4IL-if-iuv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VwD-B4-j7L"/>
+                            <constraint firstItem="4IL-if-iuv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eSP-5V-7B9"/>
+                            <constraint firstItem="4IL-if-iuv" firstAttribute="top" secondItem="R6g-6L-CuW" secondAttribute="bottom" id="l9V-Qz-b1h"/>
+                            <constraint firstItem="R6g-6L-CuW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="teq-c6-Sxu"/>
+                            <constraint firstItem="R6g-6L-CuW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zEz-fm-lpQ"/>
+                            <constraint firstItem="7Mw-YG-213" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zQi-eH-81C"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-darth-vader-50" selectedImage="icons8-darth-vader-50 (1)" id="jfe-bj-5rd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="931.88405797101461" y="225.66964285714283"/>
+        </scene>
+        <!--Planets View Controller-->
+        <scene sceneID="g1b-Mw-waJ">
+            <objects>
+                <viewController storyboardIdentifier="PlanetsVC" id="Lw7-Wm-Abh" customClass="PlanetsViewController" customModule="HealthFirstChallengeAssesment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8fY-x3-gMw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KZU-fx-ztT">
+                                <rect key="frame" x="0.0" y="98.5" width="414" height="714.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYp-Z1-yNl">
+                                <rect key="frame" x="20" y="44" width="374" height="44.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="44"/>
+                                <color key="textColor" red="1" green="0.85618325390000005" blue="0.51237655900000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="KZU-fx-ztT" firstAttribute="top" secondItem="WYp-Z1-yNl" secondAttribute="bottom" constant="10" id="3dZ-pm-blm"/>
+                            <constraint firstItem="KZU-fx-ztT" firstAttribute="bottom" secondItem="ecI-wK-CSM" secondAttribute="bottom" id="4nA-AM-bGc"/>
+                            <constraint firstItem="WYp-Z1-yNl" firstAttribute="top" secondItem="ecI-wK-CSM" secondAttribute="top" id="Asx-g1-BNs"/>
+                            <constraint firstItem="ecI-wK-CSM" firstAttribute="trailing" secondItem="WYp-Z1-yNl" secondAttribute="trailing" constant="20" id="IcU-E3-AdF"/>
+                            <constraint firstItem="WYp-Z1-yNl" firstAttribute="leading" secondItem="ecI-wK-CSM" secondAttribute="leading" constant="20" id="JL1-YT-Kzq"/>
+                            <constraint firstItem="KZU-fx-ztT" firstAttribute="leading" secondItem="ecI-wK-CSM" secondAttribute="leading" id="Rmd-bU-Ydj"/>
+                            <constraint firstItem="KZU-fx-ztT" firstAttribute="trailing" secondItem="ecI-wK-CSM" secondAttribute="trailing" id="T8y-Ls-J4C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ecI-wK-CSM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="1uE-0d-RxJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fw7-qR-aMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931.88405797101461" y="-441.29464285714283"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wv2-Ew-Y48">
+            <objects>
+                <tabBarController id="Vzd-ND-bom" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GZO-e7-lKG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Lw7-Wm-Abh" kind="relationship" relationship="viewControllers" id="ALA-5x-6gW"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Mad-oi-QCB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3F-Mm-wWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="-210"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-darth-vader-50" width="50" height="50"/>
+        <image name="icons8-darth-vader-50 (1)" width="50" height="50"/>
+        <image name="icons8-star-wars-48" width="120" height="120"/>
+    </resources>
 </document>
