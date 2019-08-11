@@ -19,7 +19,7 @@ class PlanetsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       setupUI()
+        setupUI()
     }
     
     private func setupUI() {
@@ -58,11 +58,8 @@ extension PlanetsViewController: UITableViewDelegate, UITableViewDataSource {
         return 80
     }
     
+    //navigate to see Detailed information
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let DetailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
-            present(DetailVC, animated: true)
-        }
-        
-}
+        PresentDetail(image: "11832")
+    }
 }

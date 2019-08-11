@@ -10,7 +10,6 @@
 		09095D3722FE144F0054D282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D3622FE144F0054D282 /* AppDelegate.swift */; };
 		09095D3922FE144F0054D282 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D3822FE144F0054D282 /* PeopleViewController.swift */; };
 		09095D3C22FE144F0054D282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09095D3A22FE144F0054D282 /* Main.storyboard */; };
-		09095D3E22FE14520054D282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09095D3D22FE14520054D282 /* Assets.xcassets */; };
 		09095D4122FE14520054D282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09095D3F22FE14520054D282 /* LaunchScreen.storyboard */; };
 		09095D4C22FE14530054D282 /* HealthFirstChallengeAssesmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D4B22FE14530054D282 /* HealthFirstChallengeAssesmentTests.swift */; };
 		09095D5C22FE19860054D282 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D5B22FE19860054D282 /* APIClient.swift */; };
@@ -19,6 +18,8 @@
 		0970543722FFAABA0048912D /* PeopleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543622FFAABA0048912D /* PeopleTableCell.swift */; };
 		0970543922FFAAD10048912D /* PlanetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543822FFAAD10048912D /* PlanetTableCell.swift */; };
 		0970543B22FFD9BF0048912D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543A22FFD9BF0048912D /* DetailViewController.swift */; };
+		0970543E22FFE1C50048912D /* Extentions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543D22FFE1C50048912D /* Extentions+UIViewController.swift */; };
+		0970544022FFE3B10048912D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0970543F22FFE3B10048912D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 		09095D3622FE144F0054D282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09095D3822FE144F0054D282 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		09095D3B22FE144F0054D282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		09095D3D22FE14520054D282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09095D4022FE14520054D282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09095D4222FE14520054D282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09095D4722FE14530054D282 /* HealthFirstChallengeAssesmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthFirstChallengeAssesmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +48,8 @@
 		0970543622FFAABA0048912D /* PeopleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableCell.swift; sourceTree = "<group>"; };
 		0970543822FFAAD10048912D /* PlanetTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableCell.swift; sourceTree = "<group>"; };
 		0970543A22FFD9BF0048912D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0970543D22FFE1C50048912D /* Extentions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+UIViewController.swift"; sourceTree = "<group>"; };
+		0970543F22FFE3B10048912D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		09095D3522FE144F0054D282 /* HealthFirstChallengeAssesment */ = {
 			isa = PBXGroup;
 			children = (
+				0970543C22FFE1B00048912D /* Extensions */,
 				0970543522FFAAA00048912D /* Cells */,
 				09095D5A22FE15060054D282 /* Models */,
 				09095D5922FE14F60054D282 /* API Client */,
@@ -113,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				09095D3622FE144F0054D282 /* AppDelegate.swift */,
-				09095D3D22FE14520054D282 /* Assets.xcassets */,
 				09095D3F22FE14520054D282 /* LaunchScreen.storyboard */,
+				0970543F22FFE3B10048912D /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,6 +163,14 @@
 				0970543822FFAAD10048912D /* PlanetTableCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0970543C22FFE1B00048912D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0970543D22FFE1C50048912D /* Extentions+UIViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09095D4122FE14520054D282 /* LaunchScreen.storyboard in Resources */,
-				09095D3E22FE14520054D282 /* Assets.xcassets in Resources */,
+				0970544022FFE3B10048912D /* Assets.xcassets in Resources */,
 				09095D3C22FE144F0054D282 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +282,7 @@
 				09095D5C22FE19860054D282 /* APIClient.swift in Sources */,
 				0970543422FF9E770048912D /* PlanetsViewController.swift in Sources */,
 				0970543B22FFD9BF0048912D /* DetailViewController.swift in Sources */,
+				0970543E22FFE1C50048912D /* Extentions+UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

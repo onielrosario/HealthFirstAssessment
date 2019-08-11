@@ -9,11 +9,22 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    @IBOutlet weak var DetailBackground: UIImageView!
+    var imageName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
+    }
+    
+    private func setupUI() {
+        if let image = imageName {
+              DetailBackground.image = UIImage(named: image)
+        }
+    }
+    
+    deinit {
+        imageName = nil
     }
 
     @IBAction func backButton(_ sender: UIButton) {

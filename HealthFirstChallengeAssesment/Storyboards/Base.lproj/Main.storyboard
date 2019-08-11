@@ -101,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11832" translatesAutoresizingMaskIntoConstraints="NO" id="2oU-NH-Pay">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharacterBackgoundImage" translatesAutoresizingMaskIntoConstraints="NO" id="2oU-NH-Pay">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlanetName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNq-jD-21J">
@@ -159,6 +159,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PBM-ew-7AE"/>
                     </view>
+                    <connections>
+                        <outlet property="DetailBackground" destination="2oU-NH-Pay" id="08j-hF-u74"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngh-sd-Xh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,7 +270,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="11832" width="1920" height="1080"/>
+        <image name="CharacterBackgoundImage" width="1280" height="800"/>
         <image name="icons8-darth-vader-50" width="50" height="50"/>
         <image name="icons8-darth-vader-50 (1)" width="50" height="50"/>
         <image name="icons8-planet-50" width="50" height="50"/>

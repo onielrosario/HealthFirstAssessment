@@ -59,4 +59,9 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    //navigate to see detailed information
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        PresentDetail(image: "CharacterBackgoundImage")
+    }
 }
