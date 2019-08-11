@@ -18,6 +18,7 @@
 		0970543422FF9E770048912D /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543322FF9E770048912D /* PlanetsViewController.swift */; };
 		0970543722FFAABA0048912D /* PeopleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543622FFAABA0048912D /* PeopleTableCell.swift */; };
 		0970543922FFAAD10048912D /* PlanetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543822FFAAD10048912D /* PlanetTableCell.swift */; };
+		0970543B22FFD9BF0048912D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543A22FFD9BF0048912D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		0970543322FF9E770048912D /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
 		0970543622FFAABA0048912D /* PeopleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableCell.swift; sourceTree = "<group>"; };
 		0970543822FFAAD10048912D /* PlanetTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableCell.swift; sourceTree = "<group>"; };
+		0970543A22FFD9BF0048912D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				09095D3822FE144F0054D282 /* PeopleViewController.swift */,
 				0970543322FF9E770048912D /* PlanetsViewController.swift */,
+				0970543A22FFD9BF0048912D /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				0970543722FFAABA0048912D /* PeopleTableCell.swift in Sources */,
 				09095D5C22FE19860054D282 /* APIClient.swift in Sources */,
 				0970543422FF9E770048912D /* PlanetsViewController.swift in Sources */,
+				0970543B22FFD9BF0048912D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

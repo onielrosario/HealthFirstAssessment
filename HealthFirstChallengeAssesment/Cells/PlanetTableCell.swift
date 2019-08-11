@@ -10,4 +10,8 @@ import UIKit
 
 class PlanetTableCell: UITableViewCell {
     @IBOutlet weak var planetNameCell: UILabel!
+    
+    func configureCell(name: String) {
+        planetNameCell.text = name
+    }
 }

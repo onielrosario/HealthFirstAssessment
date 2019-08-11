@@ -31,7 +31,7 @@ class PeopleViewController: UIViewController {
     }
     
     private func getChatacters() {
-        APIClient.getData(from: DataCategory.people, completionHandler: { (characters, planets, error) in
+        APIClient.getData(from: DataCategory.people, completionHandler: { (characters, nil, error) in
             if let error = error {
                 print(error)
             } else if let characters = characters {

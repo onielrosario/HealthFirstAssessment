@@ -82,6 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icons8-darth-vader-50" selectedImage="icons8-darth-vader-50 (1)" id="jfe-bj-5rd">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -91,6 +92,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="931.88405797101461" y="225.66964285714283"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="wZz-ke-FcJ">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="RMA-a7-vUX" customClass="DetailViewController" customModule="HealthFirstChallengeAssesment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIY-9e-iGm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11832" translatesAutoresizingMaskIntoConstraints="NO" id="2oU-NH-Pay">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlanetName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNq-jD-21J">
+                                <rect key="frame" x="20" y="104" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="lD3-lE-CLL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcE-S9-t4s">
+                                <rect key="frame" x="0.0" y="224" width="414" height="672"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI2-ru-JE3">
+                                        <rect key="frame" x="107" y="476" width="200" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0dZ-gt-W3N"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="tsb-9H-NLI"/>
+                                        </constraints>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="0.95721405739999998" green="0.76110786200000002" blue="0.26649296280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oI2-ru-JE3" secondAttribute="bottom" constant="136" id="jBs-jg-mxg"/>
+                                    <constraint firstItem="oI2-ru-JE3" firstAttribute="centerX" secondItem="hcE-S9-t4s" secondAttribute="centerX" id="waO-qM-iCy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2oU-NH-Pay" secondAttribute="bottom" id="94Z-Cl-TxI"/>
+                            <constraint firstItem="hcE-S9-t4s" firstAttribute="leading" secondItem="PBM-ew-7AE" secondAttribute="leading" id="FsC-Gd-1oV"/>
+                            <constraint firstItem="JNq-jD-21J" firstAttribute="leading" secondItem="PBM-ew-7AE" secondAttribute="leading" constant="20" id="Q8S-wm-ySd"/>
+                            <constraint firstItem="hcE-S9-t4s" firstAttribute="top" secondItem="JNq-jD-21J" secondAttribute="bottom" constant="60" id="aVy-3e-5k4"/>
+                            <constraint firstItem="hcE-S9-t4s" firstAttribute="trailing" secondItem="PBM-ew-7AE" secondAttribute="trailing" id="dHd-nO-Cpo"/>
+                            <constraint firstAttribute="bottom" secondItem="hcE-S9-t4s" secondAttribute="bottom" id="fhA-zf-vLn"/>
+                            <constraint firstItem="PBM-ew-7AE" firstAttribute="trailing" secondItem="JNq-jD-21J" secondAttribute="trailing" constant="20" id="iO9-hy-zYi"/>
+                            <constraint firstItem="JNq-jD-21J" firstAttribute="top" secondItem="PBM-ew-7AE" secondAttribute="top" constant="60" id="jUi-c5-ziF"/>
+                            <constraint firstItem="2oU-NH-Pay" firstAttribute="top" secondItem="hIY-9e-iGm" secondAttribute="top" id="oPF-pI-lgp"/>
+                            <constraint firstItem="2oU-NH-Pay" firstAttribute="leading" secondItem="PBM-ew-7AE" secondAttribute="leading" id="rDf-cF-G8O"/>
+                            <constraint firstItem="2oU-NH-Pay" firstAttribute="trailing" secondItem="PBM-ew-7AE" secondAttribute="trailing" id="tsn-7D-Mj1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PBM-ew-7AE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngh-sd-Xh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036.2318840579712" y="-126.5625"/>
         </scene>
         <!--Planets View Controller-->
         <scene sceneID="g1b-Mw-waJ">
@@ -104,7 +173,7 @@
                                 <rect key="frame" x="0.0" y="197" width="414" height="616"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.95721405739999998" green="0.76110786200000002" blue="0.26649296280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <inset key="separatorInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <inset key="separatorInset" minX="100" minY="0.0" maxX="100" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PlanetCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlanetCell" rowHeight="127" id="Wyn-kD-yF3" customClass="PlanetTableCell" customModule="HealthFirstChallengeAssesment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="127"/>
@@ -163,7 +232,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ecI-wK-CSM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-planet-50" selectedImage="icons8-planet-50 (1)" id="1uE-0d-RxJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-planet-50" selectedImage="icons8-planet-50 (1)" id="1uE-0d-RxJ">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="KZU-fx-ztT" id="Oc7-no-ySC"/>
                     </connections>
@@ -193,6 +264,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="11832" width="1920" height="1080"/>
         <image name="icons8-darth-vader-50" width="50" height="50"/>
         <image name="icons8-darth-vader-50 (1)" width="50" height="50"/>
         <image name="icons8-planet-50" width="50" height="50"/>
