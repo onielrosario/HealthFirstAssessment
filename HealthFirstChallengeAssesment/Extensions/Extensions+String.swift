@@ -13,10 +13,14 @@ import Foundation
 extension String {
     func returnDateFormatted(dateToFormat: String) -> String {
         var newdate = self
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        if let date = dateFormatter.date(from:self) {
+        let converter = ISO8601DateFormatter()
+        converter.formatOptions = [.withInternetDateTime,
+                                   .withDashSeparatorInDate,
+                                   .withFullDate,
+                                   .withColonSeparatorInTimeZone,
+                                   .withFractionalSeconds]
+        if let date = converter.date(from:self) {
+            let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = dateToFormat
           newdate = dateFormatter.string(from: date)
         }

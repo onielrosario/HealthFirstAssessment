@@ -19,9 +19,9 @@ enum DataCategory: String {
 
 
 final class APIClient {
-    static func getData(from name: DataCategory, completionHandler: @escaping([People.PeopleResult]?,[Planets.PlanetsResult]?, Error?) -> Void) {
+    static func getData(from name: DataCategory,page: Int, completionHandler: @escaping([People.PeopleResult]?,[Planets.PlanetsResult]?, Error?) -> Void) {
         //this url retrieve data for STAR WARS Characters or Planets depending on the name description
-        guard let url = URL(string: "https://swapi.co/api/\(name)/") else { return }
+        guard let url = URL(string: "https://swapi.co/api/\(name)/?page=\(page)") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 completionHandler(nil,nil, error)

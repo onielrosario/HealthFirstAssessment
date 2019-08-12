@@ -22,10 +22,23 @@ extension UIViewController {
     
     public func presentAlertWithAction(title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: title, style: .default) { (OK) in
-            self.dismiss(animated: true, completion: nil)
-        }
+        let ok = UIAlertAction(title: "OK", style: .default) { OK in }
         alert.addAction(ok)
         present(alert, animated: true)
     }
+    
+    
+     func fetchMoreCharacters(page: Int) -> [People.PeopleResult] {
+        var newCharacters = [People.PeopleResult]()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                APIClient.getData(from: DataCategory.people, page: page, completionHandler: { (people, nil, error) in
+                    if let error = error {
+                        self.presentAlertWithAction(title: nil, message: error.localizedDescription)
+                    } else if let people = people {
+                       newCharacters = people
+                    }
+                })
+            }
+        return newCharacters
+        }
 }

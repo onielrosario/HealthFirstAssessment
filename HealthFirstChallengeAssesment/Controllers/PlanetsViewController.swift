@@ -30,7 +30,7 @@ class PlanetsViewController: UIViewController {
     }
     
     private func getPlanets() {
-        APIClient.getData(from: DataCategory.planets) { [weak self] (nil, planets, error) in
+        APIClient.getData(from: DataCategory.planets, page: 1) { [weak self] (nil, planets, error) in
             if let error = error {
                 self?.presentAlertWithAction(title: "Error", message: error.localizedDescription)
             } else if let planets = planets {

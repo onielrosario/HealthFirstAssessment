@@ -17,7 +17,8 @@ class PeopleViewController: UIViewController {
             }
         }
     }
-    
+    var currentPage = 1
+    var isFetching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,7 @@ class PeopleViewController: UIViewController {
     }
     
     private func getChatacters() {
-        APIClient.getData(from: DataCategory.people, completionHandler: { [weak self](characters, nil, error) in
+        APIClient.getData(from: DataCategory.people, page: currentPage, completionHandler: { [weak self](characters, nil, error) in
             if let error = error {
                self?.presentAlertWithAction(title: "Error", message: error.localizedDescription)
             } else if let characters = characters {
@@ -64,5 +65,32 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let character = starWarsCharacters[indexPath.row]
         presentDetail(image: "CharacterBackgoundImage", character: character, planet: nil)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.height {
+            if !isFetching {
+                isFetching = true
+                // make more API calls
+            fetchMoreData()
+            }
+        }
+    }
+    
+    private func fetchMoreData() {
+        currentPage += 1
+        isFetching = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            APIClient.getData(from: DataCategory.people, page: self.currentPage, completionHandler: { (people, nil, error) in
+                if let error = error {
+                    self.presentAlertWithAction(title: nil, message: error.localizedDescription)
+                } else if let people = people {
+                    self.starWarsCharacters.append(contentsOf: people)
+                    self.isFetching = false
+                }
+            })
+        }
     }
 }
