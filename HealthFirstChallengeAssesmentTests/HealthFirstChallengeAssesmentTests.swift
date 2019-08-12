@@ -55,23 +55,5 @@ class HealthFirstChallengeAssesmentTests: XCTestCase {
             }.resume()
         wait(for: [exp], timeout: 5.0)
     }
-    
-    
-//    func testGETimagesAPI() {
-//       
-//        let url = URL(string: "http://intergalacticdb.me/api/characters/name")!
-//        let request = URLRequest(url: url)
-//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//            if let response = response {
-//                print(response)
-//                if let data = data, let body = String(data: data, encoding: .utf8) {
-//                    print(body)
-//                }
-//            } else {
-//                print(error ?? "Unknown error")
-//            }
-//        }
-//        
-//        task.resume()
-//    }
+
 }

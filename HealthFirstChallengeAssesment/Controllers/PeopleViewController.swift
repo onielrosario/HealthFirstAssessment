@@ -28,6 +28,7 @@ class PeopleViewController: UIViewController {
     private func setupUI() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         getChatacters()
     }
     
@@ -72,7 +73,6 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
         let contentHeight = scrollView.contentSize.height
         if offsetY > contentHeight - scrollView.frame.height {
             if !isFetching {
-                isFetching = true
                 // make more API calls
             fetchMoreData()
             }
@@ -81,14 +81,14 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
     
     private func fetchMoreData() {
         currentPage += 1
-        isFetching = true
+        isFetching = !isFetching
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             APIClient.getData(from: DataCategory.people, page: self.currentPage, completionHandler: { (people, nil, error) in
                 if let error = error {
                     self.presentAlertWithAction(title: nil, message: error.localizedDescription)
                 } else if let people = people {
                     self.starWarsCharacters.append(contentsOf: people)
-                    self.isFetching = false
+                    self.isFetching = !self.isFetching
                 }
             })
         }

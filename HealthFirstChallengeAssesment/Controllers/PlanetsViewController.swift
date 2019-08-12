@@ -10,6 +10,8 @@ import UIKit
 
 class PlanetsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    var isFetching = false
+    var currentPage = 1
     var planets = [Planets.PlanetsResult]() {
         didSet {
             DispatchQueue.main.async {
@@ -30,9 +32,9 @@ class PlanetsViewController: UIViewController {
     }
     
     private func getPlanets() {
-        APIClient.getData(from: DataCategory.planets, page: 1) { [weak self] (nil, planets, error) in
+        APIClient.getData(from: DataCategory.planets, page: currentPage) { [weak self] (nil, planets, error) in
             if let error = error {
-                self?.presentAlertWithAction(title: "Error", message: error.localizedDescription)
+                self?.presentAlertWithAction(title: nil, message: error.localizedDescription)
             } else if let planets = planets {
                 self?.planets = planets
             }
@@ -63,4 +65,33 @@ extension PlanetsViewController: UITableViewDelegate, UITableViewDataSource {
         let planet = planets[indexPath.row]
         presentDetail(image: "11832", character: nil, planet: planet)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.height {
+            if !isFetching {
+                // get more data
+                fetchMoreData()
+            }
+        }
+    }
+    
+    private func fetchMoreData() {
+        currentPage += 1
+        isFetching = !isFetching
+        // wait before request
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            APIClient.getData(from: DataCategory.planets, page: self.currentPage, completionHandler: { (nil, planets, error) in
+                if let error = error {
+                    self.presentAlertWithAction(title: nil, message: error.localizedDescription)
+                } else if let planets = planets {
+                    self.planets.append(contentsOf: planets)
+                    self.isFetching = !self.isFetching
+                }
+            })
+        }
+    }
+    
+    
 }
