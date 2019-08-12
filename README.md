@@ -1,6 +1,7 @@
 # HealthFirstAssessment
 Coding challenge for HealthFirst
 ## Launching the App:
+- Upon launching the app, a greeting image of Star Wars shows up to welcome users.
 <img width="250" alt="App launchscreen" src="https://user-images.githubusercontent.com/43827399/62829917-84a50400-bbc1-11e9-9aad-332f13e4f5e4.jpg">
 
 ## Example of data display: Characters & Planets
