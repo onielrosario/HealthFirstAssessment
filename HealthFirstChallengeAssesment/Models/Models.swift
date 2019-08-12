@@ -9,13 +9,10 @@
 import Foundation
 
 /*
- will create classes wrappers for struct Models
- to be able to cache once I display Data
+ structs Models for the API objects
  */
 
-struct People: Codable {
-    let next: URL?
-    let previous: URL?
+public struct People: Codable {
     struct PeopleResult: Codable {
         //requested information : Name,Hair color,Eye color,Birth year,Date created
         let name: String
@@ -24,7 +21,6 @@ struct People: Codable {
         let birthYear: String
         let created: String
         
-        // will wrapp in a class
         enum CodingKeys: String, CodingKey {
             case name
             case hairColor = "hair_color"
@@ -36,9 +32,7 @@ struct People: Codable {
     let results: [PeopleResult]
 }
 
-class Planets: Codable {
-    let next: URL?
-    let previous: URL?
+public class Planets: Codable {
     class PlanetsResult: Codable {
         // requested information: Name,Climate,Population,Date created
         let name: String
@@ -47,16 +41,6 @@ class Planets: Codable {
         let created: String
     }
     let results: [PlanetsResult]
-}
-
-//classes
-
-class PeopleHolder: NSObject {
-    let people: People.PeopleResult
-    
-    init(people: People.PeopleResult) {
-      self.people = people
-    }
 }
 
 

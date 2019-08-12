@@ -52,7 +52,13 @@ extension PlanetsViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("error on cell dequeue")
         }
         let planet = planets[indexPath.row]
-        cell.configureCell(name: planet.name)
+        //cache data to minimize calls
+        let cache = NSCache<NSString, NSString>()
+        if let cachedData = cache.object(forKey: "cachedData") as String? {
+            cell.configureCell(name: cachedData)
+        } else {
+            cell.configureCell(name: planet.name)
+        }
         return cell
     }
     

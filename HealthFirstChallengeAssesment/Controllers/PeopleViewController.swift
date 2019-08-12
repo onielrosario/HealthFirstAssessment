@@ -35,7 +35,7 @@ class PeopleViewController: UIViewController {
     private func getChatacters() {
         APIClient.getData(from: DataCategory.people, page: currentPage, completionHandler: { [weak self](characters, nil, error) in
             if let error = error {
-               self?.presentAlertWithAction(title: "Error", message: error.localizedDescription)
+                self?.presentAlertWithAction(title: "Error", message: error.localizedDescription)
             } else if let characters = characters {
                 self?.starWarsCharacters = characters
             }
@@ -54,7 +54,13 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("error dequeuing table cell")
         }
         let character = starWarsCharacters[indexPath.row]
-              cell.configureCell(name: character.name)
+        //cache data to minimize calls
+        let cache = NSCache<NSString, NSString>()
+        if let cachedData = cache.object(forKey: "cachedData") as String? {
+            cell.configureCell(name: cachedData)
+        } else {
+            cell.configureCell(name: character.name)
+        }
         return cell
     }
     
@@ -74,7 +80,7 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
         if offsetY > contentHeight - scrollView.frame.height {
             if !isFetching {
                 // make more API calls
-            fetchMoreData()
+                fetchMoreData()
             }
         }
     }

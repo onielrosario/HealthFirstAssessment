@@ -45,6 +45,7 @@ final class APIClient {
     
     /*
      This enpoint retrieve star wars Images.
+     for future implementations
  */
     //http://intergalacticdb.me/api/characters/name
     
