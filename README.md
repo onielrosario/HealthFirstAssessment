@@ -17,3 +17,11 @@ Coding challenge for HealthFirst
 - The application contains native built in infinite scrolling or pagination. Allowing the user to experience the application with optimized perfomance and unecessary Data information unless is requested.
 
 ![giphy example of infinite scrolling](https://user-images.githubusercontent.com/43827399/62902798-f72af680-bd1d-11e9-94d7-ea829ce67254.gif)
+
+## Requirements:
+- [x] People endpoint: Name, Hair color, Eye color, Birth year, Date created
+- [x] Planets endpoint: Name, Climate, Population, Date created
+- [x] Implement infinite scroll
+- [x] simulator: iPhone XR
+- [x] IDE Version: Xcode 10.2.1 
+- [x] OS: iOS 12
