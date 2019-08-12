@@ -8,15 +8,18 @@
 
 import UIKit
 
-// dynamically set the background of detail View Controller
+/*
+ methods to be used globally in the UIViewControllers
+ */
 extension UIViewController {
+    
     func presentDetail(image: String, character: People.PeopleResult?, planet: Planets.PlanetsResult?) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let DetailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
-            DetailVC.imageName = image
-            DetailVC.character = character
-            DetailVC.planet = planet
-            present(DetailVC, animated: true)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
+            detailVC.imageName = image
+            detailVC.character = character
+            detailVC.planet = planet
+            present(detailVC, animated: true)
         }
     }
     
