@@ -52,9 +52,9 @@ class Planets: Codable {
 //classes
 
 class PeopleHolder: NSObject {
-    let people: People
+    let people: People.PeopleResult
     
-    init(people: People) {
+    init(people: People.PeopleResult) {
       self.people = people
     }
 }

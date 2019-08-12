@@ -20,6 +20,8 @@
 		0970543B22FFD9BF0048912D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543A22FFD9BF0048912D /* DetailViewController.swift */; };
 		0970543E22FFE1C50048912D /* Extentions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543D22FFE1C50048912D /* Extentions+UIViewController.swift */; };
 		0970544022FFE3B10048912D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0970543F22FFE3B10048912D /* Assets.xcassets */; };
+		0970544322FFF9A80048912D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970544222FFF9A80048912D /* Protocols.swift */; };
+		09705447230105E10048912D /* Extensions+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09705446230105E10048912D /* Extensions+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		0970543A22FFD9BF0048912D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0970543D22FFE1C50048912D /* Extentions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+UIViewController.swift"; sourceTree = "<group>"; };
 		0970543F22FFE3B10048912D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0970544222FFF9A80048912D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		09705446230105E10048912D /* Extensions+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		09095D3522FE144F0054D282 /* HealthFirstChallengeAssesment */ = {
 			isa = PBXGroup;
 			children = (
+				0970544122FFF9930048912D /* New Group */,
 				0970543C22FFE1B00048912D /* Extensions */,
 				0970543522FFAAA00048912D /* Cells */,
 				09095D5A22FE15060054D282 /* Models */,
@@ -169,8 +174,17 @@
 			isa = PBXGroup;
 			children = (
 				0970543D22FFE1C50048912D /* Extentions+UIViewController.swift */,
+				09705446230105E10048912D /* Extensions+String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0970544122FFF9930048912D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				0970544222FFF9A80048912D /* Protocols.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +293,9 @@
 				0970543922FFAAD10048912D /* PlanetTableCell.swift in Sources */,
 				09095D3722FE144F0054D282 /* AppDelegate.swift in Sources */,
 				0970543722FFAABA0048912D /* PeopleTableCell.swift in Sources */,
+				0970544322FFF9A80048912D /* Protocols.swift in Sources */,
 				09095D5C22FE19860054D282 /* APIClient.swift in Sources */,
+				09705447230105E10048912D /* Extensions+String.swift in Sources */,
 				0970543422FF9E770048912D /* PlanetsViewController.swift in Sources */,
 				0970543B22FFD9BF0048912D /* DetailViewController.swift in Sources */,
 				0970543E22FFE1C50048912D /* Extentions+UIViewController.swift in Sources */,

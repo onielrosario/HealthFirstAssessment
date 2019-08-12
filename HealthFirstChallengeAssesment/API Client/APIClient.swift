@@ -8,6 +8,7 @@
 
 import Foundation
 
+//enum cases will alter the url enpoint
 
 enum DataCategory: String {
     case people = "people"
@@ -42,6 +43,9 @@ final class APIClient {
             }.resume()
     }
     
+    /*
+     This enpoint retrieve star wars Images.
+ */
     //http://intergalacticdb.me/api/characters/name
     
     

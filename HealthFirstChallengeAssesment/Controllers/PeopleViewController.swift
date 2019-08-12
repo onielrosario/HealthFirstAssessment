@@ -31,11 +31,11 @@ class PeopleViewController: UIViewController {
     }
     
     private func getChatacters() {
-        APIClient.getData(from: DataCategory.people, completionHandler: { (characters, nil, error) in
+        APIClient.getData(from: DataCategory.people, completionHandler: { [weak self](characters, nil, error) in
             if let error = error {
-                print(error)
+               self?.presentAlertWithAction(title: "Error", message: error.localizedDescription)
             } else if let characters = characters {
-                self.starWarsCharacters = characters
+                self?.starWarsCharacters = characters
             }
         })
     }
@@ -52,7 +52,7 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("error dequeuing table cell")
         }
         let character = starWarsCharacters[indexPath.row]
-        cell.configureCell(name: character.name)
+              cell.configureCell(name: character.name)
         return cell
     }
     
@@ -62,6 +62,7 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
     
     //navigate to see detailed information
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        PresentDetail(image: "CharacterBackgoundImage")
+        let character = starWarsCharacters[indexPath.row]
+        presentDetail(image: "CharacterBackgoundImage", character: character, planet: nil)
     }
 }

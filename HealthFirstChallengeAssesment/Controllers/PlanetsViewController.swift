@@ -30,11 +30,11 @@ class PlanetsViewController: UIViewController {
     }
     
     private func getPlanets() {
-        APIClient.getData(from: DataCategory.planets) { (nil, planets, error) in
+        APIClient.getData(from: DataCategory.planets) { [weak self] (nil, planets, error) in
             if let error = error {
-                print(error.localizedDescription)
+                self?.presentAlertWithAction(title: "Error", message: error.localizedDescription)
             } else if let planets = planets {
-                self.planets = planets
+                self?.planets = planets
             }
         }
     }
@@ -60,6 +60,7 @@ extension PlanetsViewController: UITableViewDelegate, UITableViewDataSource {
     
     //navigate to see Detailed information
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        PresentDetail(image: "11832")
+        let planet = planets[indexPath.row]
+        presentDetail(image: "11832", character: nil, planet: planet)
     }
 }
