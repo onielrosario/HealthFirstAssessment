@@ -12,3 +12,8 @@ Coding challenge for HealthFirst
 - Upon tapping on each name, a more detailed information about that Planet or Character will show:
 
 <img width="250" alt="Screen Shot Detail 1" src="https://user-images.githubusercontent.com/43827399/62844910-e036c680-bc81-11e9-9817-dfd3be30f4e1.png">  <img width="250" alt="Screen Shot Detail 2" src="https://user-images.githubusercontent.com/43827399/62844911-e036c680-bc81-11e9-8724-34cce192513f.png">
+
+## Features:
+- The application contains native built infinite scrolling or pagination. Allowing the user to experience the application with optimized perfomance and unecessary Data information unless is requested.
+
+![giphy example of infinite scrolling](https://user-images.githubusercontent.com/43827399/62902798-f72af680-bd1d-11e9-94d7-ea829ce67254.gif)
