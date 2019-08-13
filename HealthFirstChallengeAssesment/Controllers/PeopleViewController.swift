@@ -17,9 +17,9 @@ class PeopleViewController: UIViewController {
             }
         }
     }
-    var currentPeoplePage: String?
-    var currentPage = 1
-    var isFetching = false
+    private var currentPeoplePage: String!
+    private var currentPage = 1
+    private var isFetching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

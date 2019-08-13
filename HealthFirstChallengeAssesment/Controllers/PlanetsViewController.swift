@@ -10,9 +10,9 @@ import UIKit
 
 class PlanetsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var isFetching = false
-    var currentPage = 1
-    var currentPlanetPage: String!
+    private var isFetching = false
+    private var currentPage = 1
+    private var currentPlanetPage: String!
     var planets = [Planets.PlanetsResult]() {
         didSet {
             DispatchQueue.main.async {
