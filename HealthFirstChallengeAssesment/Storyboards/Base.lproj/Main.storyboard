@@ -33,7 +33,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Mw-YG-213">
                                 <rect key="frame" x="0.0" y="188.5" width="414" height="624.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" red="0.95721405739999998" green="0.76110786200000002" blue="0.26649296280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="1" green="0.56470588235294117" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="100" minY="0.0" maxX="100" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PeopleCell" rowHeight="151" id="TEi-cL-TS0" customClass="PeopleTableCell" customModule="HealthFirstChallengeAssesment" customModuleProvider="target">
@@ -82,8 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icons8-darth-vader-50" selectedImage="icons8-darth-vader-50 (1)" id="jfe-bj-5rd">
-                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="7Mw-YG-213" id="SXb-S8-wch"/>
@@ -159,10 +158,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI2-ru-JE3">
-                                <rect key="frame" x="107" y="736" width="200" height="60"/>
+                                <rect key="frame" x="103.5" y="736" width="207" height="60"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="5RL-9B-uJg"/>
                                     <constraint firstAttribute="height" constant="60" id="anP-Wb-p63"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
@@ -190,6 +188,7 @@
                             <constraint firstItem="oI2-ru-JE3" firstAttribute="centerX" secondItem="2oU-NH-Pay" secondAttribute="centerX" id="NBW-vy-Jmf"/>
                             <constraint firstItem="Whe-X4-dx5" firstAttribute="centerX" secondItem="g2W-bR-9a4" secondAttribute="centerX" id="OIc-fO-rnf"/>
                             <constraint firstItem="JNq-jD-21J" firstAttribute="leading" secondItem="PBM-ew-7AE" secondAttribute="leading" constant="20" id="Q8S-wm-ySd"/>
+                            <constraint firstItem="oI2-ru-JE3" firstAttribute="width" secondItem="2oU-NH-Pay" secondAttribute="width" multiplier="0.5" id="Q9m-oP-P2l"/>
                             <constraint firstItem="O46-T0-Ifl" firstAttribute="centerY" secondItem="2oU-NH-Pay" secondAttribute="centerY" multiplier="0.8" id="Yxw-YP-4dp"/>
                             <constraint firstItem="oI2-ru-JE3" firstAttribute="bottom" secondItem="hcE-S9-t4s" secondAttribute="bottom" constant="-100" id="ZLt-qu-5rm">
                                 <userDefinedRuntimeAttributes>
@@ -238,7 +237,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KZU-fx-ztT">
                                 <rect key="frame" x="0.0" y="197" width="414" height="616"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" red="0.95721405739999998" green="0.76110786200000002" blue="0.26649296280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="1" green="0.56470588235294117" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="100" minY="0.0" maxX="100" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PlanetCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlanetCell" rowHeight="127" id="Wyn-kD-yF3" customClass="PlanetTableCell" customModule="HealthFirstChallengeAssesment" customModuleProvider="target">
@@ -311,7 +310,7 @@
         <scene sceneID="wv2-Ew-Y48">
             <objects>
                 <tabBarController id="Vzd-ND-bom" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GZO-e7-lKG">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="GZO-e7-lKG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
