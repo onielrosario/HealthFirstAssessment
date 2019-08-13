@@ -45,15 +45,15 @@ class DetailViewController: UIViewController {
     private func updateLabels(character: People.PeopleResult?, planet: Planets.PlanetsResult?) {
         if let character = character {
             mainNameLabel.text = character.name
-            firstLabel.text = "Hair color: " + character.hairColor
-            secondLabel.text = "Eye color: " + character.eyeColor
-            thirdLabel.text = "birth: " + character.birthYear
-            fourthLabel.text = "Date created: " + character.created.returnDateFormatted(dateToFormat: "MM/dd/yyyy")
+            firstLabel.text = "Hair color: \n\(character.hairColor)"
+            secondLabel.text = "Eye color: \n\(character.eyeColor)"
+            thirdLabel.text = "birth: \n\(character.birthYear)"
+            fourthLabel.text = "Date created: \n\(character.created.returnDateFormatted(dateToFormat: "MM/dd/yyyy"))"
         } else if let planet = planet {
             mainNameLabel.text = planet.name
-            firstLabel.text = "climate: " + planet.climate
-            secondLabel.text = "population: " + planet.population
-            thirdLabel.text = "created: " + planet.created.returnDateFormatted(dateToFormat: "MM/dd/yyyy")
+            firstLabel.text = "climate: \n\(planet.climate)"
+            secondLabel.text = "population: \n\(planet.population)"
+            thirdLabel.text = "created: \n\(planet.created.returnDateFormatted(dateToFormat: "MM/dd/yyyy"))"
             fourthLabel.isHidden = true
         }
     }
