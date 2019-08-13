@@ -28,8 +28,8 @@ final class APIClient {
                 do {
                     switch name {
                     case .people:
-                         let people = try JSONDecoder().decode(People.self, from: data)
-                         completionHandler(people,nil,nil)
+                        let people = try JSONDecoder().decode(People.self, from: data)
+                        completionHandler(people,nil,nil)
                     case .planets:
                         let planets = try JSONDecoder().decode(Planets.self, from: data)
                         completionHandler(nil,planets,nil)
@@ -44,7 +44,7 @@ final class APIClient {
     /*
      This enpoint retrieve star wars Images.
      for future implementations
- */
+     */
     //http://intergalacticdb.me/api/characters/name
     
     

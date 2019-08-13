@@ -43,7 +43,6 @@ class PeopleViewController: UIViewController {
             }
         })
     }
-    
 }
 
 extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
@@ -90,13 +89,13 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
         guard currentPeoplePage != nil else { return }
         currentPage += 1
         isFetching = !isFetching
-            APIClient.getData(from: DataCategory.people, page: self.currentPage, completionHandler: { (people, nil, error) in
-                if error != nil {
-                    return
-                } else if let people = people {
-                    self.starWarsCharacters.append(contentsOf: people.results)
-                    self.isFetching = !self.isFetching
-                }
-            })
+        APIClient.getData(from: DataCategory.people, page: self.currentPage, completionHandler: { (people, nil, error) in
+            if error != nil {
+                return
+            } else if let people = people {
+                self.starWarsCharacters.append(contentsOf: people.results)
+                self.isFetching = !self.isFetching
+            }
+        })
     }
 }

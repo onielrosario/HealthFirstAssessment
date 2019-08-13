@@ -17,6 +17,8 @@ extension UIViewController {
             detailVC.imageName = image
             detailVC.character = character
             detailVC.planet = planet
+            detailVC.modalTransitionStyle = .crossDissolve
+            detailVC.modalPresentationStyle = .overCurrentContext
             present(detailVC, animated: true)
         }
     }

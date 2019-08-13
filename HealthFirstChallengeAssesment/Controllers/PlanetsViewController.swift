@@ -86,15 +86,15 @@ extension PlanetsViewController: UITableViewDelegate, UITableViewDataSource {
     
     private func fetchMoreData() {
         guard currentPlanetPage != nil else { return }
-            currentPage += 1
-            isFetching = !isFetching
-            APIClient.getData(from: DataCategory.planets, page: self.currentPage, completionHandler: { (nil, planets, error) in
-                if error != nil {
-                   return
-                } else if let planets = planets {
-                    self.planets.append(contentsOf: planets.results)
-                    self.isFetching = !self.isFetching
-                }
-            })
-        }
+        currentPage += 1
+        isFetching = !isFetching
+        APIClient.getData(from: DataCategory.planets, page: self.currentPage, completionHandler: { (nil, planets, error) in
+            if error != nil {
+                return
+            } else if let planets = planets {
+                self.planets.append(contentsOf: planets.results)
+                self.isFetching = !self.isFetching
+            }
+        })
+    }
 }
