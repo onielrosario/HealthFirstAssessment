@@ -17,6 +17,7 @@ class PeopleViewController: UIViewController {
             }
         }
     }
+    var currentPeoplePage: String?
     var currentPage = 1
     var isFetching = false
     
@@ -37,7 +38,8 @@ class PeopleViewController: UIViewController {
             if let error = error {
                 self?.presentAlertWithAction(title: "Error", message: error.localizedDescription)
             } else if let characters = characters {
-                self?.starWarsCharacters = characters
+                self?.currentPeoplePage = characters.next
+                self?.starWarsCharacters = characters.results
             }
         })
     }
@@ -79,24 +81,22 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
         let contentHeight = scrollView.contentSize.height
         if offsetY > contentHeight - scrollView.frame.height {
             if !isFetching {
-                // make more API calls
                 fetchMoreData()
             }
         }
     }
     
     private func fetchMoreData() {
+        guard currentPeoplePage != nil else { return }
         currentPage += 1
         isFetching = !isFetching
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             APIClient.getData(from: DataCategory.people, page: self.currentPage, completionHandler: { (people, nil, error) in
-                if let error = error {
-                    self.presentAlertWithAction(title: nil, message: error.localizedDescription)
+                if error != nil {
+                    return
                 } else if let people = people {
-                    self.starWarsCharacters.append(contentsOf: people)
+                    self.starWarsCharacters.append(contentsOf: people.results)
                     self.isFetching = !self.isFetching
                 }
             })
-        }
     }
 }

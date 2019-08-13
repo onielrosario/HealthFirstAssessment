@@ -9,9 +9,9 @@
 import UIKit
 
 class PeopleTableCell: UITableViewCell {
-    @IBOutlet weak var CharacterNameLabel: UILabel!
+    @IBOutlet weak var characterNameLabel: UILabel!
     
     func configureCell(name: String) {
-        CharacterNameLabel.text = name
+        characterNameLabel.text = name
     }
 }

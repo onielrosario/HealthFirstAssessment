@@ -13,7 +13,8 @@
 		09095D4122FE14520054D282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09095D3F22FE14520054D282 /* LaunchScreen.storyboard */; };
 		09095D4C22FE14530054D282 /* HealthFirstChallengeAssesmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D4B22FE14530054D282 /* HealthFirstChallengeAssesmentTests.swift */; };
 		09095D5C22FE19860054D282 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D5B22FE19860054D282 /* APIClient.swift */; };
-		09095D5E22FE21320054D282 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095D5D22FE21320054D282 /* Models.swift */; };
+		090A56782302480C00EB2CC1 /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A56772302480C00EB2CC1 /* PlanetModel.swift */; };
+		090A567A2302484100EB2CC1 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A56792302484100EB2CC1 /* PeopleModel.swift */; };
 		0970543422FF9E770048912D /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543322FF9E770048912D /* PlanetsViewController.swift */; };
 		0970543722FFAABA0048912D /* PeopleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543622FFAABA0048912D /* PeopleTableCell.swift */; };
 		0970543922FFAAD10048912D /* PlanetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970543822FFAAD10048912D /* PlanetTableCell.swift */; };
@@ -44,7 +45,8 @@
 		09095D4B22FE14530054D282 /* HealthFirstChallengeAssesmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFirstChallengeAssesmentTests.swift; sourceTree = "<group>"; };
 		09095D4D22FE14530054D282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09095D5B22FE19860054D282 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		09095D5D22FE21320054D282 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		090A56772302480C00EB2CC1 /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
+		090A56792302484100EB2CC1 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 		0970543322FF9E770048912D /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
 		0970543622FFAABA0048912D /* PeopleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableCell.swift; sourceTree = "<group>"; };
 		0970543822FFAAD10048912D /* PlanetTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableCell.swift; sourceTree = "<group>"; };
@@ -153,7 +155,8 @@
 		09095D5A22FE15060054D282 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				09095D5D22FE21320054D282 /* Models.swift */,
+				090A56772302480C00EB2CC1 /* PlanetModel.swift */,
+				090A56792302484100EB2CC1 /* PeopleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,8 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09095D5E22FE21320054D282 /* Models.swift in Sources */,
 				09095D3922FE144F0054D282 /* PeopleViewController.swift in Sources */,
+				090A56782302480C00EB2CC1 /* PlanetModel.swift in Sources */,
 				0970543922FFAAD10048912D /* PlanetTableCell.swift in Sources */,
 				09095D3722FE144F0054D282 /* AppDelegate.swift in Sources */,
 				0970543722FFAABA0048912D /* PeopleTableCell.swift in Sources */,
@@ -286,6 +289,7 @@
 				09705447230105E10048912D /* Extensions+String.swift in Sources */,
 				0970543422FF9E770048912D /* PlanetsViewController.swift in Sources */,
 				0970543B22FFD9BF0048912D /* DetailViewController.swift in Sources */,
+				090A567A2302484100EB2CC1 /* PeopleModel.swift in Sources */,
 				0970543E22FFE1C50048912D /* Extentions+UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

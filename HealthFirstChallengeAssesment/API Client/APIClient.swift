@@ -19,7 +19,7 @@ enum DataCategory: String {
 
 
 final class APIClient {
-    static func getData(from name: DataCategory,page: Int, completionHandler: @escaping([People.PeopleResult]?,[Planets.PlanetsResult]?, Error?) -> Void) {
+    static func getData(from name: DataCategory,page: Int, completionHandler: @escaping(People?,Planets?, Error?) -> Void) {
         //this url retrieve data for STAR WARS Characters or Planets depending on the name description
         guard let url = URL(string: "https://swapi.co/api/\(name)/?page=\(page)") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -30,12 +30,11 @@ final class APIClient {
                     switch name {
                     case .people:
                          let people = try JSONDecoder().decode(People.self, from: data)
-                         completionHandler(people.results,nil,nil)
+                         completionHandler(people,nil,nil)
                     case .planets:
                         let planets = try JSONDecoder().decode(Planets.self, from: data)
-                        completionHandler(nil,planets.results,nil)
+                        completionHandler(nil,planets,nil)
                     }
-                    //got data
                 } catch {
                     completionHandler(nil,nil, error)
                 }
