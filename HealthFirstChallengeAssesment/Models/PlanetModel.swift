@@ -12,7 +12,6 @@ import Foundation
 public class Planets: Codable {
     var next: String?
     class PlanetsResult: Codable {
-        // requested information: Name,Climate,Population,Date created
         let name: String
         let climate: String
         let population: String

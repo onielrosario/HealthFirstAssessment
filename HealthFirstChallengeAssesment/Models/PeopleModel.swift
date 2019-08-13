@@ -12,7 +12,6 @@ import Foundation
 public struct People: Codable {
     var next: String?
     struct PeopleResult: Codable {
-        //requested information : Name,Hair color,Eye color,Birth year,Date created
         let name: String
         let hairColor: String
         let eyeColor: String

@@ -8,9 +8,7 @@
 
 import UIKit
 
-/*
- methods to be used globally in the UIViewControllers
- */
+
 extension UIViewController {
     
     func presentDetail(image: String, character: People.PeopleResult?, planet: Planets.PlanetsResult?) {
