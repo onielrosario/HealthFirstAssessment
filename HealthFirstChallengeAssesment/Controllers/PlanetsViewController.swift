@@ -88,7 +88,6 @@ extension PlanetsViewController: UITableViewDelegate, UITableViewDataSource {
         guard currentPlanetPage != nil else { return }
             currentPage += 1
             isFetching = !isFetching
-            // wait before request
             APIClient.getData(from: DataCategory.planets, page: self.currentPage, completionHandler: { (nil, planets, error) in
                 if error != nil {
                    return
