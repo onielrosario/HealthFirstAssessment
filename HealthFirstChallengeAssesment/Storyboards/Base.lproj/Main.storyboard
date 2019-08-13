@@ -82,7 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icons8-darth-vader-50" selectedImage="icons8-darth-vader-50 (1)" id="jfe-bj-5rd">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -304,9 +304,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ecI-wK-CSM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-planet-50" selectedImage="icons8-planet-50 (1)" id="1uE-0d-RxJ">
-                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-planet-50" selectedImage="icons8-planet-50 (1)" id="1uE-0d-RxJ"/>
                     <connections>
                         <outlet property="tableView" destination="KZU-fx-ztT" id="Oc7-no-ySC"/>
                     </connections>
